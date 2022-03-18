@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{verbatim}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+\title{SPECYFIKACJA IMPLEMENTACYJNA\\Generator zamówień}
+\date{16 listopada 2020}
+\author{Piotr Nowak}
+
+\begin{document}
+\maketitle
+
+\section{Algorytm}
+\subsection{Wybrany algorytm}
+\noindent{\bf Algorytm sympleks\\}
+Przy pomocy algorytmu sympleks będę starał się zminimalizować funkcję całkowitego kosztu zamówień.
+\subsection{Uzasadnienie}
+Nasz problem można w dość prosty sposób zapisać przy pomocy równań liniowych. Problem można wtedy sprowadzić do minimalizacji funkcji kosztów przy określonych warunkach. Algorytm sympleks jako klasyczna metoda rozwiązywania programów liniowych powinien być dość prosty w implementacji. 
+\section{Struktury danych}
+\subsection{Macierz}
+W programie wielokrotnie wykorzystywana będzie macierz zaimplementowana jako struktura.
+\section{Środowisko programistyczne}
+\begin{description}
+\item[\texttt {Język }] - C 
+\item[\texttt {Kompilator }] - GNU Compiler Collection 9.3.0
+\item[\texttt {System }] - Windows Subsystem for Linux - Ubuntu 20.04 LTS
+\end{description}
+\section{Przewidywana struktura programu}
+Program będzie składał się z następujących modułów:
+\begin{enumerate}
+\item Moduł \textbf{io} zawierający funkcje odpowiadające za obsługę plików.
+\item Moduł \textbf{matrix} zawierający implementację macierzy oraz funkcji umożliwiających operacje na nich.
+\item Moduł \textbf{simplex} zawierający implementację algorytmu sympleks.
+\end{enumerate}
+\section{Testy}
+\subsection{Forma testów}
+Program zostanie przetestowany poprzez funkcje napisane w osobnym module. Testy obejmują sprawdzenie, czy wszystkie połączenia zostały zawarte w pliku wyjściowym oraz porównanie wyników z oczekiwanymi.
+\subsection{Przewidywane testowane sytuacje}
+\begin{enumerate}
+\item Poprawne dane.
+\item Błędny format pliku.
+\item Gdy nie starczy szczepionek, aby zaspokoić dzienne zapotrzebowanie co najmniej jednej apteki.
+\end{enumerate}
+\end{document}

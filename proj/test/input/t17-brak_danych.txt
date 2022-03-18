@@ -1,0 +1,3 @@
+# Producenci szczepionek (id | nazwa | dzienna produkcja)
+# Apteki (id | nazwa | dzienne zapotrzebowanie)
+# Połączenia producentów i aptek (id producenta | id apteki | dzienna maksymalna liczba dostarczanych szczepionek | koszt szczepionki [zł] )

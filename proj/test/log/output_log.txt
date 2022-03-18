@@ -1,0 +1,27 @@
+./orders -i test/output/data_in/d1-prawidlowe_dane.txt  -o test/output/data_out/d1-prawidlowe_dane.txt
+./orders -i test/output/data_in/d2-za_malo_szczepionek.txt  -o test/output/data_out/d2-za_malo_szczepionek.txt
+orders:Niewystarczajaca ilosc szczepionek aby zaspokoic dzienne zapotrzebowanie wszystkich aptek.
+
+./orders -i test/output/data_in/d3-rowna_ilosc_szczepionek.txt  -o test/output/data_out/d3-rowna_ilosc_szczepionek.txt
+./orders -i test/output/data_in/d4-rowna_ilosc_szczepionek_losowe.txt  -o test/output/data_out/d4-rowna_ilosc_szczepionek_losowe.txt
+./orders -i test/output/data_in/d5-dane_losowe_10x100.txt  -o test/output/data_out/d5-dane_losowe_10x100.txt
+./orders -i test/output/data_in/d6-dane_losowe_25x25.txt  -o test/output/data_out/d6-dane_losowe_25x25.txt
+./orders -i test/output/data_in/d7-dane_losowe_50x50.txt -o test/output/data_out/d7-dane_losowe_50x50.txt
+./test/output/result_test test/output/data_in/d1-prawidlowe_dane.txt test/output/data_out/d1-prawidlowe_dane.txt
+Pozytywny wynik testu dla danych test/output/data_in/d1-prawidlowe_dane.txt
+
+./test/output/result_test test/output/data_in/d3-rowna_ilosc_szczepionek.txt test/output/data_out/d3-rowna_ilosc_szczepionek.txt
+Pozytywny wynik testu dla danych test/output/data_in/d3-rowna_ilosc_szczepionek.txt
+
+./test/output/result_test test/output/data_in/d4-rowna_ilosc_szczepionek_losowe.txt test/output/data_out/d4-rowna_ilosc_szczepionek_losowe.txt
+Pozytywny wynik testu dla danych test/output/data_in/d4-rowna_ilosc_szczepionek_losowe.txt
+
+./test/output/result_test test/output/data_in/d5-dane_losowe_10x100.txt test/output/data_out/d5-dane_losowe_10x100.txt
+Pozytywny wynik testu dla danych test/output/data_in/d5-dane_losowe_10x100.txt
+
+./test/output/result_test test/output/data_in/d6-dane_losowe_25x25.txt test/output/data_out/d6-dane_losowe_25x25.txt
+Pozytywny wynik testu dla danych test/output/data_in/d6-dane_losowe_25x25.txt
+
+./test/output/result_test test/output/data_in/d7-dane_losowe_50x50.txt  test/output/data_out/d7-dane_losowe_50x50.txt
+Pozytywny wynik testu dla danych test/output/data_in/d7-dane_losowe_50x50.txt
+

@@ -1,0 +1,177 @@
+./orders
+Uzycie:
+	-i  -  plik wejściowy
+	-o  -  plik wyjściowy
+orders:Brak nazwy pliku wejsciowego.
+
+./orders -a 1234
+./orders: invalid option -- 'a'
+orders:Uzycie:
+	-i  -  plik wejściowy
+	-o  -  plik wyjściowy
+
+
+./orders -i abc
+Uzycie:
+	-i  -  plik wejściowy
+	-o  -  plik wyjściowy
+orders:Brak nazwy pliku wyjsciowego.
+
+./orders -i tjhdujernr -o def
+orders:Nie udalo sie otworzyc pliku wejsciowego
+
+./orders -i test/input/t0-pusty_plik_wejsciowy.txt -o a
+orders:Pusty plik wejsciowy.
+
+./orders -i test/input/t1-brak_id_apteki.txt -o a
+orders:Bledny format danych wejsciowych w linii # 6 :
+	| CentMedEko 24h | 690
+
+
+./orders -i test/input/t2-brak_nazwy_apteki.txt -o a
+orders:Bledny format danych wejsciowych w linii # 5 :
+	0 |  | 450
+
+
+./orders -i test/input/t3-brak_dziennej_produkcji.txt -o a
+orders:Bledny format danych wejsciowych w linii # 2 :
+	0 | BioTech 2.0 |
+
+
+./orders -i test/input/t4-brak_id_producenta.txt -o a
+orders:Bledny format danych wejsciowych w linii # 3 :
+	 | Eko Polska 2020 | 1300
+
+
+./orders -i test/input/t5-brak_nazwy_producenta.txt -o a
+orders:Bledny format danych wejsciowych w linii # 2 :
+	0 |  | 900
+
+
+./orders -i test/input/t6-brak_dziennego_zapotrzebowania.txt -o a
+orders:Bledny format danych wejsciowych w linii # 6 :
+	1 | CentMedEko 24h |
+
+
+./orders -i test/input/t7-brak_id_producenta_polaczenia.txt -o a
+orders:Bledny format danych wejsciowych w linii # 9 :
+	| 1 | 600 | 70
+
+
+./orders -i test/input/t8-brak_id_apteki_polaczenia.txt -o a
+orders:Bledny format danych wejsciowych w linii # 11 :
+	1 || 900 | 100
+
+
+./orders -i test/input/t9-brak_dziennej_maksymalnej_liczby_dostarczanych_szczepionek.txt -o a
+orders:Bledny format danych wejsciowych w linii # 11 :
+	1 | 0 | | 100
+
+
+./orders -i test/input/t10-brak_kosztu_szczepionki.txt -o a
+orders:Bledny format danych wejsciowych w linii # 10 :
+	0 | 2 | 750 |
+
+
+./orders -i test/input/t11-brak_apteki.txt -o a
+orders:Brakuje aptek.
+
+./orders -i test/input/t12-brak_poducenta.txt -o a
+orders:Brakuje producentow.
+
+./orders -i test/input/t13-brak_polaczenia.txt -o a
+orders:Brakuje polaczen.
+
+./orders -i test/input/t14-brak_komentarza_pierwszego.txt -o a
+orders:Bledny format danych wejsciowych w linii # 1 :
+	0 | BioTech 2.0 | 900
+
+
+./orders -i test/input/t15-brak_komentarza_drugiego.txt -o a
+orders:Wczytano powtarzajacy sie indeks w linii # 5 :
+	0 | CentMedEko Centrala | 450
+
+
+./orders -i test/input/t16-brak_komentarza_trzeciego.txt -o a
+orders:Wczytano powtarzajacy sie indeks w linii # 8 :
+	0 | 0 | 800 | 70.5
+
+
+./orders -i test/input/t17-brak_danych.txt -o a
+orders:Wejsciowy plik nie zawiera niezbednych danych.
+
+./orders -i test/input/t18-zduplikowane_id_producenta.txt -o a
+orders:Wczytano powtarzajacy sie indeks w linii # 3 :
+	1 | Eko Polska 2020 | 1300
+
+
+./orders -i test/input/t19-zduplikowane_id_apteki.txt -o a
+orders:Wczytano powtarzajacy sie indeks w linii # 7 :
+	2 | CentMedEko Nowogrodzka | 1200
+
+
+./orders -i test/input/t20-zduplikowane_id_polaczenia.txt -o a
+orders:Wczytano powtarzajacy sie indeks w linii # 9 :
+	0 | 0 | 600 | 70
+
+
+./orders -i test/input/t21-id_nieistniejacego_producenta.txt -o a
+orders:Wczytano indeks nieistniejacej instytucji w linii # 8 :
+	1000 | 0 | 800 | 70.5
+
+
+./orders -i test/input/t22-id_nieistniejacej_apteki.txt -o a
+orders:Wczytano indeks nieistniejacej instytucji w linii # 9 :
+	0 | 23423432234 | 600 | 70
+
+
+./orders -i test/input/t23-id_nieistniejacego_producenta_polaczenia.txt -o a
+orders:Wczytano indeks nieistniejacej instytucji w linii # 9 :
+	110 | 1 | 600 | 70
+
+
+./orders -i test/input/t24-id_nieistniejacej_apteki_polaczenia.txt -o a
+orders:Wczytano indeks nieistniejacej instytucji w linii # 11 :
+	1 | 100 | 900 | 100
+
+
+./orders -i test/input/t25-ujemna_dzienna_produkcja.txt -o a
+orders:Wczytano ujemna wartosc w linii # 4 :
+	2 | Post-Covid Sp. z o.o. | -1100
+
+
+./orders -i test/input/t26-ujemne_dzienne_zapotrzebowanie.txt -o a
+orders:Wczytano ujemna wartosc w linii # 5 :
+	0 | CentMedEko Centrala | -450
+
+
+./orders -i test/input/t27-ujemne_id_producenta.txt -o a
+orders:Wczytano ujemna wartosc w linii # 3 :
+	-1 | Eko Polska 2020 | 1300
+
+
+./orders -i test/input/t28-ujemne_id_apteki.txt -o a
+orders:Wczytano ujemna wartosc w linii # 6 :
+	-1 | CentMedEko 24h | 690
+
+
+./orders -i test/input/t29-ujemne_id_producenta_polaczenia.txt -o a
+orders:Wczytano ujemna wartosc w linii # 11 :
+	-1 | 0 | 900 | 100
+
+
+./orders -i test/input/t30-ujemne_id_apteki_polaczenia.txt -o a
+orders:Wczytano ujemna wartosc w linii # 9 :
+	0 | -1 | 600 | 70
+
+
+./orders -i test/input/t31-ujemna_dzienna_maksymalna_liczba_dostarczanych_szczepionek.txt -o a
+orders:Wczytano ujemna wartosc w linii # 10 :
+	0 | 2 | -750 | 90.99
+
+
+./orders -i test/input/t32-ujemny_koszt.txt -o a
+orders:Wczytano ujemna wartosc w linii # 8 :
+	0 | 0 | 800 | -70.5
+
+

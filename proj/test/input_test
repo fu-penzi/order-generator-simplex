@@ -1,0 +1,6 @@
+#!/bin/bash
+make -C .. clean
+make -C ..
+make -C .. -i input &> log/input_log.txt
+sed -i '/^make:/d' log/input_log.txt
+make -C .. clean
